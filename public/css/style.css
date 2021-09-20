@@ -1,0 +1,492 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+html {
+    font-size: 12px;
+    scroll-behavior: smooth;
+}
+/*UTILITY CODE*/
+h1, h2, h3, h4 {
+    font-family:'Poppins';
+}
+
+p {
+    font-family: 'Lato', sans-serif;
+}
+
+/*HEADER*/
+header {
+    background: linear-gradient(to bottom, rgb(0, 0, 0, 0.8), rgb(0, 0, 0, 0.3)), url(../Images/white-tee-portrait-ConvertImage.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+}
+/*LOGO*/
+#brand {
+    width: 40%;
+    margin:auto;
+    /*border: 2px solid red;*/
+    padding: 50px 10px 20px 10px;
+}
+#brand h1 {
+    text-align: center;
+    font-weight: 500;
+    text-transform: uppercase;
+    font-size: 2rem;
+    letter-spacing: 2px;
+}
+#brand h1 span:nth-child(1) {
+    color: var(--light6);
+}
+#brand h1 span:nth-child(2) {
+    color: var(--light4);
+}
+#brand h1 span:nth-child(3) {
+    color: var(--light5);
+}
+
+/*NAVBAR*/
+div#mobile-menu, div#menu-icon {
+    display: none;
+}
+#navbar {
+    /*border: 2px solid blue;*/
+    margin-top: 30px ;
+}
+#navbar ul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    list-style-type: none;
+}
+div#close h1 {
+    cursor: pointer;
+    display: none;
+    color: var(--light4);
+}
+#navbar ul li {
+    /*border: 2px solid purple;*/
+    margin: 15px 34px;
+    padding: 10px 40px;
+}
+#navbar ul li a {
+    text-decoration: none;
+    font-size: 1.75rem;
+    font-weight: 200;
+    color: var(--light6);
+    position: relative;     /*as ::after has absolute position*/
+    transition: all 0.3s ease-in;
+}
+#navbar ul li a:hover{
+    color: var(--light5);
+}
+#navbar ul li a::after {        /*for adding a line for the hover effect*/
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -15px;
+    width: 0;    
+    height: 2px;
+    background-color: var(--pure);
+    transition: width 0.3s ease-in-out;
+}
+#navbar ul li a:hover:after {       /*anchor tag k hover effect pe after element pe transition lane k liye*/
+    width: 70%;
+}
+
+/*INTRO-TEXT*/
+div.intro-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /*border: 2px solid yellowgreen;*/
+    margin-top: 20px;
+    height: 400px;
+}
+div.intro-text h4, div.intro-text h1, div.intro-text h4 div.intro-text button {
+    transform: translateY(30px);
+} 
+div.intro-text h4 {
+    color: var(--light4);
+    margin: 40px;
+    margin-bottom: 30px;
+    font-size: 2.0rem;
+    font-weight: 400;
+    letter-spacing: 3px;
+}
+div.intro-text h1 {
+    color: var(--light4);
+    margin-bottom: 30px;
+    font-size: 4rem;
+    font-weight: 400;
+    letter-spacing: 10px;
+}
+div.intro-text button {
+    width: 180px;
+    height: 55px;
+    background: var(--light4);
+    font-weight: 600;
+    border: 2px solid transparent;
+    color: var(--dark3);
+    margin-top: 70px;
+    transition: all 0.3s ease-in;
+    cursor: pointer;
+}
+
+div.intro-text button:hover {
+    background: transparent;
+    border: 2px solid var(--light4);
+    color: var(--light4);
+} 
+
+/*ABOUT*/
+div#about {
+    display: flex;
+    border-top: 2px solid var(--light4);
+    background: var(--dark2);
+    height: 100vh;
+}
+div#logo {
+    /*border: 2px solid red;*/
+    padding: 20px;
+    padding-top: 8%;
+    margin-top: 15px;
+    display: flex;
+    flex-direction: column;
+}
+div#logo img {
+    filter: invert(100%);
+}
+div#about-text {
+    /*border: 2px solid purple;*/
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 50px;
+    color: var(--light1);
+    line-height: 2;
+}
+div#about-text h2 {
+    font-size: 2.4rem;
+    font-weight: 400;
+    text-align: center;
+}
+div#about-text h4 {
+    color: var(--low-mid2);
+    font-size: 1.5rem;
+    text-align: center;
+    font-weight: 300;
+}
+div#about-text p {
+    margin-top: 34px;
+    text-align: center;
+    padding: 10px;
+    line-height: 2.3;
+}
+/*SOCIAL LINKS*/
+.social {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-align: center;
+    /*border: 2px solid pink;*/
+    margin-top: 20px;
+    padding: 22px;
+}
+.icons {
+    width: 50px;
+    height: 50px;
+    filter: invert(100%);
+    border: 1px solid var(--pure);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--pure);
+    animation: social 5s ease 1 forwards;
+}
+.icons a {
+    text-decoration: none;
+    color: var(--darkest);
+}
+.icons a:hover {
+    width: 52px;
+    height: 52px;
+    color: var(--dark3);
+}
+@keyframes social {
+    0% {
+        margin-left: -150px;
+    }
+    30% {
+        margin-left: -100px;
+    }
+    50% {
+        margin-left: -20%;
+    }
+    100% {
+        margin-left: 0px;
+    }
+}
+/*SHOP*/
+#shop {
+    display: flex;
+    flex-direction: column;
+    background: linear-gradient(to bottom, var(--dark5), var(--light6));
+    border-top: 2px solid var(--light3);
+    border-bottom: 2px solid var(--light3);
+}
+.heading {
+    text-align: center;
+    margin-top: 50px;
+    width: 100%;
+    min-height: 60px;
+    margin-bottom: 50px;
+}
+.heading h1 {
+    font-size: 4rem;
+    letter-spacing: 20px;
+    text-transform: uppercase;
+    font-weight: 400;
+    color: var(--light4);
+}
+.range {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+div.split {
+    border: 2px solid var(--light4);
+    padding: 50px;
+    margin: 50px;
+    height: 400px;
+    text-align: center;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.split h2 {
+    font-size: 1.8rem;
+    letter-spacing: 4px;
+    margin-bottom: 20px;
+    font-weight: 500;
+    color: var(--light6);
+}
+.split button {
+    width: 150px;
+    height: 40px;
+    transform: translateY(50px);
+    cursor: pointer;
+    font-weight: 600;
+    border: 2px solid transparent;
+    transition: all 0.2s ease-in-out;
+}
+.split button:hover {
+    background: transparent;
+    border: 2px solid white;
+    color: white;
+}
+
+div.left {
+    background: linear-gradient(to right, rgb(0,0,0,0.2), rgb(0,0,0,0.3)), url(../images/white_tee_portrait_BW.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border: none;
+    transition: all 0.2s ease-in-out;
+    border: 2px solid var(--light5);
+}
+div.mid {
+    background: linear-gradient(to right, rgb(0,0,0,0.3), rgb(0,0,0,0.5)), url(../images/gray_tee_portrait.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border: none;
+    transition: all 0.2s ease-in-out;
+    border: 2px solid var(--light5);
+}
+div.right {
+    background: linear-gradient(to right, rgb(0,0,0,0.2), rgb(0,0,0,0.3)), url(../images/black_tee_portrait.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border: none;
+    transition: all 0.2s ease-in-out;
+    border: 2px solid var(--light5);
+}
+div.store-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    margin-top: 20px;
+}
+div.store-link a {
+    font-size: 1.4rem;
+    color: var(--dark4);
+    text-transform: capitalize;
+    transition: all 0.2s ease;
+}
+div.store-link a:hover {
+    color: var(--low-mid1);
+    transform: scale(1.2);
+}
+
+/*MAGAZINE*/
+section#magazine-section {
+    height: 100vh;
+/*border: 2px solid red;*/
+}
+div#magazine {
+/*border: 2px solid blue;*/
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background: var(--dark2);
+    color: var(--low-mid4);
+    border-top: 2px solid var(--light4);
+}
+#magazine h1 {
+    font-size: 3.4rem;
+    letter-spacing: 8px;
+    margin-top: 50px;
+    text-align: center;
+    font-weight: 500;
+}
+#magazine h4 {
+    text-align: center;
+    margin-top: 30px;
+    font-size: 1.8rem;
+    letter-spacing: 9px;
+    font-weight: 300;
+}
+div.blog-posts {
+    width: 50%;
+    height: 50%;
+    /*border: 2px solid yellow;*/
+    margin: auto;
+    background: var(--dark5);
+}
+
+
+/*CONTACT*/
+section#contact-section {
+    height: 100vh;
+    width: 100%;
+}
+div#contact {
+    background: var(--dark4);
+    height: 110vh;
+    width: 100%;
+    border-top: 2px solid var(--low-mid5);
+    /*border: 2px solid red;*/
+}
+div#contact h1 {
+    color: var(--light5);
+    text-align: center;
+    font-size: 3.5rem;
+    letter-spacing: 8px;
+    font-weight: 500;
+    padding-top: 34px;
+}
+div#contact h4 {
+    color: var(--light3);
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: 400;
+    padding-left: 30px;
+    padding-right: 30px;
+    letter-spacing: 5px;
+}
+div#contact form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid var(--mid3);
+    width: 60%;
+    height: max-content;
+    margin: 34px auto;
+    padding: 30px;
+}
+div#contact label {
+    color: var(--light4);
+    font-size: 1.7rem;
+    padding-bottom: 25px;
+    padding-top: 25px;
+    letter-spacing: 4px;
+}
+div#contact input {
+    width: 70%;
+    height: 30px;
+    text-align: center;
+    border-radius: 5px;
+    color: var(--light4);
+    background: transparent;
+    outline: none;
+    border: 2px solid var(--low-mid1);
+}
+div#contact input:focus {
+    background: var(--dark3);
+}
+div#contact button {
+    width: 25%;
+    height: 50px;
+    margin-top: 34px;
+    border: 2px solid transparent;
+    font-size: 1.2rem;
+    font-weight: 600;
+    background: var(--low-mid5);
+    cursor: pointer;
+    transition: all 0.2s ease-in;
+}
+div#contact button:hover {
+    background: transparent;
+    border: 2px solid var(--low-mid3);
+    color: var(--light4);
+}
+/*FOOTER*/
+footer {
+    padding: 10px;
+    background: linear-gradient(to bottom, var(--dark5), var(--low-mid5))
+}
+footer h2 {
+    text-align: center;
+    font-weight: 400;
+}
+/*VARIABLES*/
+:root {
+    --darkest: #000000;
+    --dark1: #0a0a0a;
+    --dark2: #141414;
+    --dark3: #1e1e1e;
+    --dark4: #282828;
+    --dark5: #323232;
+    --dark5: #3b3b3b;
+    --mid1: #454545;
+    --mid2: #4f4f4f;
+    --mid3: #595959;
+    --mid4: #636363;
+    --mid5: #6c6c6c;
+    --mid6: #767676;
+    --mid7:#808080;
+    --low-mid1: #8a8a8a;
+    --low-mid2: #949494;
+    --low-mid3: #9d9d9d;
+    --low-mid4: #a7a7a7;
+    --low-mid5: #b1b1b1;
+    --light1: #bbbbbb;
+    --light2: #c5c5c5;
+    --light3: #cecece;
+    --light4: #d8d8d8;
+    --light5: #e2e2e2;
+    --light6: #ececec;
+    --pure: #f6f6f6;
+}

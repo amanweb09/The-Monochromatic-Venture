@@ -1,0 +1,15 @@
+header {
+    height: max-content;
+}
+div.intro-text button {
+    margin-bottom: 20px;
+}
+div.intro-text h4 {
+    font-size: 0.95rem;
+}
+div.intro-text h1 {
+    font-size: 1.9rem;
+    padding-left: 20px;
+    padding-right: 20px;
+
+}

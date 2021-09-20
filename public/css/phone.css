@@ -1,0 +1,175 @@
+div.container {
+    overflow-x: hidden;
+}
+header {
+    overflow: hidden;
+    height: max-content;
+}
+/*BRAND*/
+#brand {
+    width: 100%;
+}
+
+/*NAVBAR*/
+div#mobile-menu {
+    width: 100%;
+    height: 50px;
+    display: block;
+}
+div#menu-icon {
+    width: max-content;
+    white-space: nowrap;
+    height: 35px;
+    background: transparent;
+    box-shadow: inset(2px, 2px, #bbbbbb);
+    display: block;
+    outline: none;
+    border: 1px solid #e2e2e2;
+    margin: 10px auto;
+    cursor: pointer;
+    padding: 7px 10px;
+    overflow: hidden;
+}
+div#menu-icon h3 {
+    font-weight: 600;
+    text-transform: capitalize;
+    letter-spacing: 6px;
+    font-family: 'Courier New', Courier, monospace;
+    text-align: center;
+    color: #e2e2e2;
+}
+ul.nav-list li{
+    flex-direction: row;
+    display: none;
+}
+ul.nav-list.open{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    z-index: 99999;
+    background: #454545;
+    transform: translateX(50%);
+    vertical-align: middle;
+    width: 50%;
+    animation-name: dropdown;
+    animation-duration: 0.5s;
+    animation-iteration-count: 1;
+}
+ul.nav-list.open li{
+    display: block;
+}
+
+@keyframes dropdown {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+div#menu-icon h3 span {
+    font-size: 0.8rem;
+}
+/*INTRO-TEXT*/
+div.intro-text h4 {
+    text-align: center;
+    width: 90%;
+    font-size: 1.52rem;
+}
+div.intro-text h1 {
+    text-align: center;
+    font-size: 2.9rem;
+    margin-top: 20px;
+}
+div.intro-text-headings.open {
+    opacity: 0;
+    pointer-events: none;
+    z-index: -1;
+}
+/*ABOUT*/
+
+section {
+    overflow-x: hidden;
+}
+div#logo {
+    overflow-x: hidden;
+}
+div#logo img {
+    width: 80%;
+    margin: 20px auto;
+}
+div#about {
+    flex-direction: column;
+    height: max-content;
+    overflow-x: hidden;
+    width: 100%;
+}
+div#about-text {
+    padding: 2.15rem;
+}
+div#about-text h2 {
+    font-size: 2rem;
+}
+div#about-text h4 {
+    font-size: 1rem;
+    padding-top: 2rem;
+}
+/*SHOP*/
+section#shop-section {
+    height: max-content;
+}
+div.range {
+    flex-direction: column;
+    height: max-content;
+}
+.heading h1 {
+    font-size: 3.3rem;
+    letter-spacing: 12px;
+}
+.split button {
+    z-index: 999;
+    color: #ffffff;
+    background: #808080;
+    border: 2px solid #c5c5c5;
+}
+
+/*MAGAZINE*/
+#magazine h1 {
+    font-size: 2.7rem;
+}
+#magazine h4 {
+    font-size: 1.2rem;
+    letter-spacing: 5px;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+/*CONTACT*/
+div#contact {
+    height: 720px;
+}
+section#contact-section {
+    height: max-content;
+}
+div#contact form {
+    width: 90%;
+}
+div#contact h1 {
+    font-size: 2.2rem ;
+}
+div#contact h4 {
+    font-size: 1rem;
+    letter-spacing: 1px;
+    padding-top: 1.5rem;
+}
+div#contact form input {
+    width: 90%;
+}
+div#contact button {
+    width: 30%;
+    height: 40px;
+}
+/*FOOTER*/
+footer h2 {
+    font-size: 0.7rem;
+    color: #e2e2e2;
+}
