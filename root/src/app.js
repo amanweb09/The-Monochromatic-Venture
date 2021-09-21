@@ -21,6 +21,10 @@ const views_path = path.join(__dirname, "../templates/views")
 const static_path = path.join(__dirname, "../public")
 
 
+//DB CONN
+require('./database/conn');
+
+
 //VIEW ENGINE CONFIG
 app.set('view engine', 'ejs');
 app.set('views', views_path);
@@ -31,7 +35,8 @@ app.use(express.static(static_path))
 
 
 //ROUTES
-app.use(require('./routes/routes'))
+app.use(require('./routes/routes'));
+app.use(require('./routes/auth'));
 
 
 
