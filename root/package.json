@@ -1,0 +1,32 @@
+{
+  "name": "the_monochromatic_venture-master",
+  "version": "1.0.0",
+  "description": "www.TheMonochromaticVenture.com official website",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon src/app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/amanweb09/The-Monochromatic-Venture.git"
+  },
+  "keywords": [
+    "[]"
+  ],
+  "author": "aman",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/amanweb09/The-Monochromatic-Venture/issues"
+  },
+  "homepage": "https://github.com/amanweb09/The-Monochromatic-Venture#readme",
+  "dependencies": {
+    "dotenv": "^10.0.0",
+    "ejs": "^3.1.6",
+    "esm": "^3.2.25",
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.12"
+  }
+}
